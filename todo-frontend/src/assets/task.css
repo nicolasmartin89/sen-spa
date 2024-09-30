@@ -1,0 +1,31 @@
+.task-container {
+    background-color: #FFEFE7;
+    color: #333;
+    text-align: start;
+    padding: 0 10px;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    border-radius: 5px;
+    box-shadow:  2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.task-container h4 {
+    font-size: 1.3rem;
+    color: #245415;
+}
+
+.task-container button {
+    margin: 0 5px 10px;
+    padding: 2px;   
+}
+
+#boton-naranja{
+    background-color: orange;
+}
+
+#boton-rojo{
+    background-color: crimson;
+}
+
+#boton-verde{
+    background-color: forestgreen;
+}
