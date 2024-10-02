@@ -33,10 +33,9 @@ const Navbar = () => {
   };
 
   const navItems = [
-    { id: 1, text: 'Inicio' },
-    { id: 2, text: 'Servicios' },
-    { id: 3, text: 'Reservas' },
-    { id: 4, text: 'Contacto' },
+    { id: 2, text: 'Servicios', path: "/servicios" },
+    { id: 3, text: 'Reservas', path: "/reservas" },
+    { id: 4, text: 'Contacto', path: "/contacto" },
   ];
 
   return (
@@ -45,10 +44,18 @@ const Navbar = () => {
         <div className='flex justify-between items-center'>
           {/* Logo */}
           <img src={logo} alt="Logo SenSpa" className="w-30 h-20" />
-          
+
           {/* Navegación Desktop */}
+
           <ul className='hidden md:flex items-center'>
+            <Link
+              to="/"
+              className='p-4 hover:bg-orange-500 dark:hover:bg-gray-200 rounded-xl m-2 cursor-pointer duration-300 hover:text-black'
+            >
+              Inicio
+            </Link>
             {navItems.map(item => (
+
               <li
                 key={item.id}
                 className='p-4 hover:bg-orange-500 dark:hover:bg-gray-200 rounded-xl m-2 cursor-pointer duration-300 hover:text-black'
@@ -102,7 +109,7 @@ const Navbar = () => {
                 key={item.id}
                 className='p-4 border-b rounded-xl hover:bg-orange-500 duration-300 hover:text-black cursor-pointer border-gray-600'
               >
-                {item.text}
+                <Link to={item.path}>{item.text}</Link>
               </li>
             ))}
             <li className='p-4 border-b rounded-xl hover:bg-orange-500 duration-300 hover:text-black cursor-pointer border-gray-600'>

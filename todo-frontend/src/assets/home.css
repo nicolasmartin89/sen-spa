@@ -1,10 +1,10 @@
 body {
-   background-image: url(../assets/images/fondo.png);
-   background-size: cover;
-   font-family: Monserrat;
+    background-image: url(../assets/images/fondo.png);
+    background-size: cover;
+    font-family: Monserrat;
 }
 
-.empleadohome-container{
+.empleadohome-container {
     display: flex;
     justify-content: center;
     flex-wrap: nowrap;
@@ -22,7 +22,7 @@ body {
     align-items: center;
 }
 
-.empleadohome-navbar .navbar-logo{
+.empleadohome-navbar .navbar-logo {
     height: 50px;
     display: flex;
     flex-direction: row;
@@ -30,7 +30,7 @@ body {
     align-items: center;
 }
 
-.empleadohome-navbar img{
+.empleadohome-navbar img {
     width: 20%;
 }
 
@@ -45,12 +45,13 @@ body {
     margin: 0px 10px;
     border-radius: 10px;
 }
-.empleadohome-navbar #inicio{
+
+.empleadohome-navbar #inicio {
     background-color: #BABD8D;
 }
 
 
-.empleadohome-body{
+.empleadohome-body {
     display: flex;
     justify-content: space-around;
     flex-wrap: nowrap;
@@ -62,7 +63,7 @@ body {
 
 
 
-.empleadohome-aside div{
+.empleadohome-aside div {
     margin: 50px 50px 0 0;
 }
 
@@ -76,13 +77,13 @@ body {
     width: 250px;
 }
 
-.empleadohome-aside div form h3{
+.empleadohome-aside div form h3 {
     margin: 0px;
     font-size: 2rem;
     color: #245415;
 }
 
-.empleadohome-aside div form #boton-guardar{
+.empleadohome-aside div form #boton-guardar {
     background-color: #245415;
     color: #fff;
     padding: 0px;
@@ -94,7 +95,7 @@ body {
     align-self: center;
 }
 
-.empleadohome-aside div form #boton-agregar{
+.empleadohome-aside div form #boton-agregar {
     background-color: #245415;
     color: #fff;
     padding: 0px;
@@ -103,7 +104,7 @@ body {
     align-self: center;
 }
 
-.empleadohome-aside div form #boton-cancelar{
+.empleadohome-aside div form #boton-cancelar {
     background-color: #fb0707;
     color: #fff;
     padding: 0px;
@@ -115,7 +116,9 @@ body {
     cursor: pointer;
 }
 
-.empleadohome-aside div form input, .empleadohome-aside div form textarea, .empleadohome-aside div form select{
+.empleadohome-aside div form input,
+.empleadohome-aside div form textarea,
+.empleadohome-aside div form select {
     margin: 5px;
     background-color: white;
     color: #333;
@@ -125,16 +128,16 @@ body {
     align-self: flex-start;
 }
 
-.empleadohome-section{
+.empleadohome-section {
     margin-top: 50px;
     width: 100%;
     background-color: #BABD8D;
 }
 
-.empleadohome-section h3{  
+.empleadohome-section h3 {
     font-size: 1.5rem;
     color: #245415;
-    
+
 }
 
 .empleadohome-find {
@@ -149,32 +152,32 @@ body {
     color: #333;
 }
 
-.empleadohome-tasks{
+.empleadohome-tasks {
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
     flex-wrap: wrap;
 }
 
-.empleadohome-tasks h2{
+.empleadohome-tasks h2 {
     width: 100%;
     font-size: 2rem;
     color: #245415;
     margin: 5px 0px 0px;
 }
 
-.empleadohome-task{
+.empleadohome-task {
     background-color: #BABD8D;
     width: 250px;
 }
 
-.form-validation-span{
+.form-validation-span {
     color: #fb0707;
     font-family: Arial, Helvetica, sans-serif;
     display: none;
 }
 
-#msg-alert-find{
+#msg-alert-find {
     background-color: #245415;
     padding: 20px;
     color: #BABD8D;
