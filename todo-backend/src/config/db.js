@@ -15,6 +15,9 @@ const db = new sqlite3.Database(DATABASE_URL, (err) => {
   console.log("Conectado a la base de datos SQLite");
 });
 
+
+
+
 const initializeDatabase = () => {
   const createTasksTable = `
     CREATE TABLE IF NOT EXISTS tasks (
