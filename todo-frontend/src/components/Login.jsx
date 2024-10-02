@@ -10,7 +10,7 @@ const Login = () => {
     e.preventDefault();
     // Contraseña predefinida
     if (password === 'SenSpa2024') {
-      navigate('/formulario'); // Redirige al formulario dashboard de tareas después del login exitoso
+      navigate('/dashboard');
     } else {
       alert('Contraseña incorrecta');
     }
