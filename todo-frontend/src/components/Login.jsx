@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import logo from '../assests/images/logologin.png';
+import logo from '../assets/images/logologin.png';
 
 const Login = () => {
   const [password, setPassword] = useState('');
@@ -17,7 +17,7 @@ const Login = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-[#a1a1aa]">
+    <div className="flex items-center justify-center min-h-screen bg-grey-200">
       <div className="w-full max-w-xl"> {/* Cambiado de max-w-md a max-w-xl */}
         <form onSubmit={handleLogin} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
           <div className="mb-6 text-center">

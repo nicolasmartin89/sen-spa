@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaInstagram, FaXTwitter, FaFacebookF } from 'react-icons/fa6';
-import logo from '..//assests/images/LOGOSENSPA.png';
+import logo from '../assets/images/LOGOSENSPA.png';
 
 const Footer = () => {
   const socialLinks = [
