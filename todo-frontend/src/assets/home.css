@@ -1,9 +1,16 @@
 body {
-    background-image: url(../assets/images/fondo.png);
-    background-size: cover;
     font-family: Monserrat;
 }
-
+h1, h2, h3{
+    font-family: Prata;
+}
+.altoHero{
+    height: 50vh;
+}
+.altoCard{
+    height: 40vh;
+}
+  
 .empleadohome-container {
     display: flex;
     justify-content: center;

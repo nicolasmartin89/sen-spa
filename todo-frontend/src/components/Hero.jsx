@@ -2,9 +2,13 @@ import React from 'react';
 
 const Hero = () => {
     return (
-        <section className="flex flex-col items-center justify-center h-screen bg-cover bg-center" style={{ backgroundImage: "url('public/header-img-1.png')" }}>
-            <h1 className="text-4xl font-semibold text-black">Bienvenidos a Sen Spa.</h1>
-            <h2 className="text-xl mt-5 font-light text-black">Un lugar para meditar</h2>
+        <section className='altoHero md:h-screen relative bg-cover bg-center' style={{ backgroundImage: "url('src/assets/img/header-img-1.png')" }} >
+            <div className='flex justify-center p-5'>
+                <img  src="src/assets/img/spaSen.png" alt="Logo Sen Spa"/>
+            </div>
+            <div className="flex justify-center absolute inset-x-0 bottom-20 md:bottom-40" >
+                <button className="bg-orange-500 px-4 py-2 rounded text-white w-48 text-2xl md:w-64 ">Reservas</button>
+            </div>
         </section>
     );
 };
