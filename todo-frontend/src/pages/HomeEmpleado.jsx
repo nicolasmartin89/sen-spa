@@ -23,7 +23,7 @@ export default function HomeEmpleado() {
     const spanStatus = document.getElementById("form-validation-span-status");
     //GET Tareas
     const cargarTareas = async () => {
-        fetch("https://sen-spa-backend.vercel.app/api/tasks")
+        fetch("http://localhost:3000/api/tasks")
             .then((response) => response.json())
             .then((data) => {
                 setTareas(data.tasks);
@@ -84,7 +84,7 @@ export default function HomeEmpleado() {
                 type: tareasForm.type,
                 status: tareasForm.status,
             };
-            fetch("https://sen-spa-backend.vercel.app/api/tasks", {
+            fetch("http://localhost:3000/api/tasks", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -115,7 +115,7 @@ export default function HomeEmpleado() {
     //DELETE Tarea
     const deleteTask = (id) => {
         if (confirm(`¿Esta seguro de que desea eliminar la tarea: ${id}?`)) {
-            fetch(`https://sen-spa-backend.vercel.app/api/tasks/${id}`, { method: "DELETE" })
+            fetch(`http://localhost:3000/api/tasks/${id}`, { method: "DELETE" })
                 .then(() => cargarTareas())
                 .catch((error) => console.error("Error al eliminar la tarea: ", error));
         }
@@ -131,7 +131,7 @@ export default function HomeEmpleado() {
             type: tareasForm.type,
             status: tareasForm.status,
         };
-        fetch(`https://sen-spa-backend.vercel.app/api/tasks/${id}`, {
+        fetch(`http://localhost:3000/api/tasks/${id}`, {
             headers: {
                 Accept: "application/json",
                 "Content-Type": "application/json",
@@ -166,7 +166,7 @@ export default function HomeEmpleado() {
             type: task.type,
             status: "En progreso"
         };
-        fetch(`https://sen-spa-backend.vercel.app/api/tasks/${task.id}`, {
+        fetch(`http://localhost:3000/api/tasks/${task.id}`, {
             headers: {
                 Accept: "application/json",
                 "Content-Type": "application/json",
@@ -182,7 +182,7 @@ export default function HomeEmpleado() {
     }
     //PATCH Tarea
     const completeTask = (id) => {
-        fetch(`https://sen-spa-backend.vercel.app/api/tasks/${id}/complete`, {
+        fetch(`http://localhost:3000/api/tasks/${id}/complete`, {
             headers: {
                 Accept: "application/json",
                 "Content-Type": "application/json",
@@ -208,7 +208,7 @@ export default function HomeEmpleado() {
             type: task.type,
             status: "Por iniciar"
         };
-        fetch(`https://sen-spa-backend.vercel.app/api/tasks/${task.id}`, {
+        fetch(`http://localhost:3000/api/tasks/${task.id}`, {
             headers: {
                 Accept: "application/json",
                 "Content-Type": "application/json",
