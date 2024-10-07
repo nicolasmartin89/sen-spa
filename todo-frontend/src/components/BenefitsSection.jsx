@@ -2,26 +2,41 @@ import React from 'react';
 
 const BenefitsSection = () => {
     return (
-
-        <section className="flex justify-center p-8 xl:p-32 bg-red-50 flex-col">
-            <h2 className="text-xl font-bold text-yellow-700 mb-5 md:text-4xl">Beneficios</h2>
-            <div className='flex justify-center flex-col md:flex-row'>
-            
-                <div className='flex items-center justify-center md:w-2/3'>
-                    <img src="/src/assets/img/beneficios.png" alt="Imagen que muestra beneficios de la relajación" />
+        <section className="flex flex-col justify-center items-center bg-orange-200 p-6 md:p-12 rounded-lg shadow-lg">
+            <h2 className="text-lg md:text-3xl font-extrabold text-yellow-700 mb-8">Beneficios</h2>
+            <div className="flex flex-col md:flex-row items-center justify-center">
+                <div className="md:w-1/2 flex justify-center mb-6 md:mb-0">
+                    <img src="/src/assets/img/beneficios.png" alt="Beneficios de la relajación" className="w-full max-w-md rounded-lg shadow-md" />
                 </div>
-            <div className="mt-5 md:w-1/3 md:ml-10 flex flex-col justify-center">
-                <p className=' text-amber-600 font-extrabold md:text-3xl mb-5'>Alivia el dolor</p>
-                <p className=' text-amber-600 font-extrabold md:text-3xl mb-5'>Quema calorías</p>
-                <p className=' text-amber-600 font-extrabold md:text-3xl mb-5'>Fortalece la inmunidad</p>
-                <p className=' text-amber-600 font-extrabold md:text-3xl mb-5'>Desintoxica</p>
-                <p className=' text-amber-600 font-extrabold md:text-3xl mb-5'>Rejuvenece la piel</p>
-                <p className=' text-amber-600 font-extrabold md:text-3xl '>Mejora mental</p>
+                <div className="md:w-1/2 md:ml-10">
+                    <ul className="space-y-4">
+                        <li className="text-amber-700 font-semibold text-lg md:text-2xl flex items-center">
+                            <span className="inline-block w-2 h-2 bg-amber-700 rounded-full mr-2"></span>
+                            Alivia el dolor
+                        </li>
+                        <li className="text-amber-700 font-semibold text-lg md:text-2xl flex items-center">
+                            <span className="inline-block w-2 h-2 bg-amber-700 rounded-full mr-2"></span>
+                            Quema calorías
+                        </li>
+                        <li className="text-amber-700 font-semibold text-lg md:text-2xl flex items-center">
+                            <span className="inline-block w-2 h-2 bg-amber-700 rounded-full mr-2"></span>
+                            Fortalece la inmunidad
+                        </li>
+                        <li className="text-amber-700 font-semibold text-lg md:text-2xl flex items-center">
+                            <span className="inline-block w-2 h-2 bg-amber-700 rounded-full mr-2"></span>
+                            Desintoxica
+                        </li>
+                        <li className="text-amber-700 font-semibold text-lg md:text-2xl flex items-center">
+                            <span className="inline-block w-2 h-2 bg-amber-700 rounded-full mr-2"></span>
+                            Rejuvenece la piel
+                        </li>
+                        <li className="text-amber-700 font-semibold text-lg md:text-2xl flex items-center">
+                            <span className="inline-block w-2 h-2 bg-amber-700 rounded-full mr-2"></span>
+                            Mejora mental
+                        </li>
+                    </ul>
+                </div>
             </div>
-            </div>
-            
-            
-            
         </section>
     );
 };

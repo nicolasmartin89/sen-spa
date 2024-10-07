@@ -1,63 +1,3 @@
-body {
-    font-family: Monserrat;
-}
-h1, h2, h3{
-    font-family: Prata;
-}
-.altoHero{
-    height: 50vh;
-}
-.altoCard{
-    height: 40vh;
-}
-  
-.empleadohome-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: nowrap;
-}
-
-.empleadohome-navbar {
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    width: 100%;
-    height: 50px;
-    background-color: #3f3f46;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.empleadohome-navbar .navbar-logo {
-    height: 50px;
-    display: flex;
-    flex-direction: row;
-    width: 300px;
-    align-items: center;
-}
-
-.empleadohome-navbar img {
-    width: 20%;
-}
-
-.empleadohome-navbar .navbar-logo h3 {
-    font-size: 2rem;
-    font-family: Prata;
-}
-
-.empleadohome-navbar span {
-    background-color: #FA9500;
-    padding: 5px 10px;
-    margin: 0px 10px;
-    border-radius: 10px;
-}
-
-.empleadohome-navbar #inicio {
-    background-color: #BABD8D;
-}
-
-
 .empleadohome-body {
     display: flex;
     justify-content: space-around;
@@ -65,7 +5,7 @@ h1, h2, h3{
     background-color: #BABD8D;
     padding-top: 0px;
     padding-bottom: 20px;
-    margin-top: 40px;
+
 }
 
 

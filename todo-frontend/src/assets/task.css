@@ -5,7 +5,9 @@
     padding: 0 10px;
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     border-radius: 5px;
-    box-shadow:  2px 2px 4px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    padding-top: 5px;
+    margin-bottom: 5px;
 }
 
 .task-container h4 {
@@ -15,17 +17,17 @@
 
 .task-container button {
     margin: 0 5px 10px;
-    padding: 2px;   
+    padding: 2px;
 }
 
-#boton-naranja{
+#boton-naranja {
     background-color: orange;
 }
 
-#boton-rojo{
+#boton-rojo {
     background-color: crimson;
 }
 
-#boton-verde{
+#boton-verde {
     background-color: forestgreen;
 }

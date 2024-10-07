@@ -2,37 +2,26 @@ import React from 'react';
 
 const ServicesSection = () => {
     return (
-        <section className=" flex justify-center p-8 xl:p-32 bg-red-50 flex-col ">
-            <h3 className="text-xl md:text-4xl font-bold text-yellow-700 mb-1">Servicios</h3>
-            <div className='flex items-center justify-center flex-col md:flex-row'>
-                <div className='m-4 bg-yellow-100 lg:size-3/12'>
-                    <div className='py-7 px-0 flex items-center justify-center flex-col'>
-                        <img src="/src/assets/img/sauna.png" alt="Imagen servicio sauna infrarrojo" className="w-1/2" />
-                        <p className='md:text-lg font-bold'>Sauna infrarrojo</p>
-                    </div>
+        <section className="flex flex-col justify-center items-center bg-orange-200 p-6 md:p-12">
+            <h3 className="text-lg md:text-3xl font-extrabold text-yellow-700 mb-8">Servicios</h3>
+            <div className="flex flex-wrap justify-center">
+                <div className="m-4 bg-yellow-100 p-4 w-60 flex flex-col items-center justify-center rounded-lg shadow-md">
+                    <img src="/src/assets/img/sauna.png" alt="Sauna infrarrojo" className="w-24 h-24 mb-4 rounded-full" />
+                    <p className="text-lg font-semibold text-gray-800 text-center">Sauna infrarrojo</p>
                 </div>
-                <div className='m-4 bg-yellow-100 lg:size-3/12'>
-                    <div className='py-7 px-0 flex items-center justify-center flex-col'>
-                        <img src="/src/assets/img/aromaterapia.png" alt="Imagen servicio aromaterapia" className="w-1/2" />
-                        <p className='md:text-lg font-bold'>Aromaterapia</p>
-                    </div>
+                <div className="m-4 bg-yellow-100 p-4 w-60 flex flex-col items-center justify-center rounded-lg shadow-md">
+                    <img src="/src/assets/img/aromaterapia.png" alt="Aromaterapia" className="w-24 h-24 mb-4 rounded-full" />
+                    <p className="text-lg font-semibold text-gray-800 text-center">Aromaterapia</p>
                 </div>
-                <div className='m-4 bg-yellow-100 lg:size-3/12'>
-                    <div className='py-7 px-0 flex items-center justify-center flex-col'>
-                        <img src="/src/assets/img/terapiaSal.png" alt="Imagen servicio terapia con sal" className="w-1/2" />
-                        <p className='md:text-lg font-bold'>Terapia con sal</p>
-                    </div>
+                <div className="m-4 bg-yellow-100 p-4 w-60 flex flex-col items-center justify-center rounded-lg shadow-md">
+                    <img src="/src/assets/img/terapiaSal.png" alt="Terapia con sal" className="w-24 h-24 mb-4 rounded-full" />
+                    <p className="text-lg font-semibold text-gray-800 text-center">Terapia con sal</p>
                 </div>
-                <div className='m-4 bg-yellow-100 lg:size-3/12'>
-                    <div className='py-7 px-0 flex items-center justify-center flex-col'>
-                        <img src="/src/assets/img/saunaVapor.png" alt="Imagen servicio sauna vapor" className="w-1/2" />
-                        <p className='md:text-lg font-bold'>Sauna vapor</p>
-                    </div>
-                    
+                <div className="m-4 bg-yellow-100 p-4 w-60 flex flex-col items-center justify-center rounded-lg shadow-md">
+                    <img src="/src/assets/img/saunaVapor.png" alt="Sauna vapor" className="w-24 h-24 mb-4 rounded-full" />
+                    <p className="text-lg font-semibold text-gray-800 text-center">Sauna Vapor</p>
                 </div>
-                
             </div>
-            
         </section>
     );
 };
