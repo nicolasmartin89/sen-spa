@@ -2,6 +2,8 @@ import "../assets/home.css";
 import Task from "../components/Task";
 import { useEffect, useState } from "react";
 export default function HomeEmpleado() {
+    const apiUrl = import.meta.env.VITE_API_URL;
+
     const [tareas, setTareas] = useState([]);
     const [tareasForm, setTareasForm] = useState({
         id: 0,
@@ -23,7 +25,7 @@ export default function HomeEmpleado() {
     const spanStatus = document.getElementById("form-validation-span-status");
     //GET Tareas
     const cargarTareas = async () => {
-        fetch("http://localhost:3000/api/tasks")
+        fetch("${apiUrl}/api/tasks")
             .then((response) => response.json())
             .then((data) => {
                 setTareas(data.tasks);
@@ -84,7 +86,7 @@ export default function HomeEmpleado() {
                 type: tareasForm.type,
                 status: tareasForm.status,
             };
-            fetch("http://localhost:3000/api/tasks", {
+            fetch("${apiUrl}/api/tasks", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -115,7 +117,7 @@ export default function HomeEmpleado() {
     //DELETE Tarea
     const deleteTask = (id) => {
         if (confirm(`¿Esta seguro de que desea eliminar la tarea: ${id}?`)) {
-            fetch(`http://localhost:3000/api/tasks/${id}`, { method: "DELETE" })
+            fetch(`${apiUrl}/api/tasks/${id}`, { method: "DELETE" })
                 .then(() => cargarTareas())
                 .catch((error) => console.error("Error al eliminar la tarea: ", error));
         }
@@ -131,7 +133,7 @@ export default function HomeEmpleado() {
             type: tareasForm.type,
             status: tareasForm.status,
         };
-        fetch(`http://localhost:3000/api/tasks/${id}`, {
+        fetch(`${apiUrl}/api/tasks/${id}`, {
             headers: {
                 Accept: "application/json",
                 "Content-Type": "application/json",
@@ -166,7 +168,7 @@ export default function HomeEmpleado() {
             type: task.type,
             status: "En progreso"
         };
-        fetch(`http://localhost:3000/api/tasks/${task.id}`, {
+        fetch(`${apiUrl}/api/tasks/${task.id}`, {
             headers: {
                 Accept: "application/json",
                 "Content-Type": "application/json",
@@ -182,7 +184,7 @@ export default function HomeEmpleado() {
     }
     //PATCH Tarea
     const completeTask = (id) => {
-        fetch(`http://localhost:3000/api/tasks/${id}/complete`, {
+        fetch(`${apiUrl}/api/tasks/${id}/complete`, {
             headers: {
                 Accept: "application/json",
                 "Content-Type": "application/json",
@@ -208,7 +210,7 @@ export default function HomeEmpleado() {
             type: task.type,
             status: "Por iniciar"
         };
-        fetch(`http://localhost:3000/api/tasks/${task.id}`, {
+        fetch(`${apiUrl}/api/tasks/${task.id}`, {
             headers: {
                 Accept: "application/json",
                 "Content-Type": "application/json",
