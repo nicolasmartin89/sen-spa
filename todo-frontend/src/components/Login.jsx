@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import logo from '../assets/images/logologin.png';
 
 const Login = () => {
   const [password, setPassword] = useState('');
@@ -23,7 +22,7 @@ const Login = () => {
           <div className="mb-6 text-center">
             {/* Logo centrado */}
             <div className="flex justify-center mb-4">
-              <img src={logo} alt="Logo SenSpa" className="w-80 h-70" />
+              <img src="/img/logologin.png" alt="Logo SenSpa" className="w-80 h-70" />
             </div>
             <h2 className="text-2xl font-bold text-gray-500">Usuario Empleado</h2>
           </div>

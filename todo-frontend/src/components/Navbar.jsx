@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import { FaMoon, FaSun } from 'react-icons/fa';
-import logo from '..//assets/images/LOGOSENSPA.png';
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -43,7 +42,7 @@ const Navbar = () => {
       <div className="max-w-[1240px] mx-auto px-4 py-6">
         <div className='flex justify-between items-center'>
           {/* Logo */}
-          <img src={logo} alt="Logo SenSpa" className="w-30 h-20" />
+          <img src="/img/LOGOSENSPA.png" alt="Logo SenSpa" className="w-30 h-20" />
 
           {/* Navegación Desktop */}
 
@@ -102,7 +101,7 @@ const Navbar = () => {
                 : 'ease-in-out w-[60%] duration-500 fixed top-0 bottom-0 left-[-100%]'
             }
           >
-            <img src={logo} alt="Logo" className="w-30 h-20" />
+            <img src="/img/LOGOSENSPA.png" alt="Logo" className="w-30 h-20" />
 
             {navItems.map(item => (
               <li

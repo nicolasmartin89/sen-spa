@@ -10,7 +10,7 @@ const InfoSection = () => {
                 </p>
             </div>
             <div className="md:w-1/2 flex justify-center p-4">
-                <img src="/src/assets/img/relax.png" alt="Persona relajándose" className="w-3/3 md:w-1/2" />
+                <img src="/img/relax.png" alt="Persona relajándose" className="w-3/3 md:w-1/2" />
             </div>
         </section>
     );

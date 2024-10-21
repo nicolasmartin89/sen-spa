@@ -6,7 +6,7 @@ const BenefitsSection = () => {
             <h2 className="text-lg md:text-3xl font-extrabold text-yellow-700 mb-8">Beneficios</h2>
             <div className="flex flex-col md:flex-row items-center justify-center">
                 <div className="md:w-1/2 flex justify-center mb-6 md:mb-0">
-                    <img src="/src/assets/img/beneficios.png" alt="Beneficios de la relajación" className="w-full max-w-md rounded-lg shadow-md" />
+                    <img src="/img/beneficios.png" alt="Beneficios de la relajación" className="w-full max-w-md rounded-lg shadow-md" />
                 </div>
                 <div className="md:w-1/2 md:ml-10">
                     <ul className="space-y-4">
