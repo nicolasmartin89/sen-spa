@@ -1,6 +1,6 @@
 import "../assets/home.css";
 import Task from "../components/Task";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 export default function HomeEmpleado() {
     const apiUrl = import.meta.env.VITE_API_URL;
 
@@ -24,17 +24,18 @@ export default function HomeEmpleado() {
     const spanType = document.getElementById("form-validation-span-type");
     const spanStatus = document.getElementById("form-validation-span-status");
     //GET Tareas
-    const cargarTareas = async () => {
-        fetch("${apiUrl}/api/tasks")
+    const cargarTareas = useCallback(async () => {
+        fetch(`${apiUrl}/api/tasks`)
             .then((response) => response.json())
             .then((data) => {
                 setTareas(data.tasks);
             })
             .catch((error) => console.error("Error al obtener las tareas:", error));
-    };
+    }, [apiUrl]);
+
     useEffect(() => {
         cargarTareas();
-    }, []);
+    }, [cargarTareas]);
     const onInputChange = (e) => {
         setTareasForm({ ...tareasForm, [e.target.name]: e.target.value });
     };
@@ -86,7 +87,7 @@ export default function HomeEmpleado() {
                 type: tareasForm.type,
                 status: tareasForm.status,
             };
-            fetch("${apiUrl}/api/tasks", {
+            fetch(`${apiUrl}/api/tasks`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -94,8 +95,8 @@ export default function HomeEmpleado() {
                 body: JSON.stringify(newTask),
             })
                 .then((response) => response.json())
-                .then(() => {
-                    cargarTareas();
+                .then((newTaskData) => {
+                    setTareas([...tareas, newTaskData]); // Actualizar el estado con la nueva tarea
                     setTareasForm({
                         id: 0,
                         name: "",
@@ -106,8 +107,6 @@ export default function HomeEmpleado() {
                         type: "",
                         status: "Por iniciar",
                     });
-                    cargarTareas();
-                    spanName.style.display = "none";
                 })
                 .catch((error) => console.error("Error al crear la tarea: ", error));
         } else {
